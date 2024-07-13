@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <title>digiskills front page</title>
+</head>
+<style>
+    /* https://digiskills.pk/fonts/fontawesome-webfont.woff2?v=4.3.0 */
+    .navbar-nav a{
+        color: black;
+    }
+    .navbar-nav a:hover{
+        border-bottom: 2px solid #f48529;
+        transition: width;
+        transition: all 0.3s ease-in-out;
+        /* animation: moveToLeft 5s ease-in-out;
+        animation-delay: 1000ms; */
+    }
+    .search-bar i{
+        background-color: #f48529;
+        padding: 10px;
+        border-radius: 50%;
+    }
+    .search-bar a:hover{
+        border-bottom: none;   
+    }
+    .sign-up a{
+        background-color: #f48529;
+        color: white;
+        border-radius: 50px;
+        padding: 5px 8px;
+    }
+    .sign-up i{
+        padding: 5px;
+    }
+    .card-aboutdigiskill{
+        transition: all 1s ease;
+    }
+    .card-aboutdigiskill:hover{
+    transform: scale(1.1);
+    }
+    .card-aboutdigiskill img{
+        transition: all 1s ease;
+    }
+    .card-aboutdigiskill:hover img{
+    transform: scale(1.1);
+    }
+    .card-img{
+    overflow: hidden;
+}
+.card-img img{
+    transition: all 1s ease;
+}
+.card-img:hover img{
+    transform: scale(1.1);
+}
+.card-position{
+    position: relative;
+  }
+  .update-img{
+    position: absolute;
+    top: -13px;
+    z-index: 1;
+  }
+.card-title:hover{
+    color: orange;
+}
+.enrollment-section{
+    background-attachment: fixed;
+    background-image: url(enrollmentBackground-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+    .newsAndevent h4:hover{
+        color: #f99312;
+    }
+    .success_stories{
+    background-attachment: fixed;
+    background-image: url(success-stories.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+.success-stories_images{
+    position: relative;
+
+}
+.success-stories_images .image-1{
+    position: absolute;
+    top: 25%;
+    left: 90%;
+}
+.success-stories_images .image-2{
+    position: absolute;
+    top: 55%;
+    left: 90%;
+}
+.success-stories_images .image-3{
+    position: absolute;
+    top: 8%;
+    left: 70%;
+}
+.success-stories_images .image-4{
+    position: absolute;
+    top: 42%;
+    left: 70%;
+}
+.success-stories_images .image-5{
+    position: absolute;
+    top: 75%;
+    left: 70%;
+}
+.success-stories_images .image-6{
+    position: absolute;
+    top: 0%;
+    left: 43%;
+}
+.success-stories_images .image-7{
+    position: absolute;
+    top: 25%;
+    left: 53%;
+}
+.success-stories_images .image-8{
+    position: absolute;
+    top: 60%;
+    left: 45%;
+}
+.success-stories_images .image-9{
+    position: absolute;
+    top: 40%;
+    left: 27%;
+}
+.success-stories_images .image-10{
+    position: absolute;
+    top: 82%;
+    left: 28%;
+}
+.description-text{
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.section-freelancing-skills{
+    background-image: url(Learning\ Freelancing\ Skills\ Image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.Mobile_apps{
+    background-image: url(mobile_app_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.btn1{
+    background-color: #f48529;
+    text-decoration: none;
+    border-radius: 40px;
+}
+.btn1:hover{
+    background-color: #434443;
+    color: white;
+    border-bottom: none;
+    text-decoration: none;
+}
+.btn2{
+    color: white;
+    background-color: #f48529;
+    text-decoration: none;
+    border-radius: 40px;
+}
+.btn2:hover{
+    background-color: white;
+    color: black;
+    border-bottom: none;
+    text-decoration: none;
+}
+.dubicate-bg-heading{
+    font-size: 50px;
+    line-height: 80px;
+    font-weight: 700;
+    width: 100%;
+    opacity: .05;
+    position: relative;
+    color: #333;
+    text-transform: capitalize;
+    left: 10px;
+    bottom: 45px;
+}
+    
+</style>
+<body>
+    <div class="container-fluid  bg-white shadow-lg" id="Home">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-md bg-white navbar-light" id="MyNavbar">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarToggler">
+                    <div class="col-md-2 d-flex">
+                    <a href="" class="navbar-brand"><img src="digiSkillLogo.png" alt="" height="50px" width="250px"></a>
+                </div>
+                <div class="col-md-10">
+                    <ul class="navbar-nav justify-content-end">
+                        <li class="nav-item px-1"><a href="#Home" class="nav-link fw-bold p-1">Home</a></li>
+                        <li class="nav-item px-1"><a href="#About" class="nav-link fw-bold p-1">Courses</a></li>
+                        <li class="nav-item px-1"><a href="#Service" class="nav-link fw-bold p-1">News & Events</a></li>
+                        <li class="nav-item px-1"><a href="#Portfolio" class="nav-link fw-bold p-1">How it Works</a></li>
+                        <li class="nav-item px-1"><a href="#Blog" class="nav-link fw-bold p-1">Blog</a></li>
+                        <li class="nav-item px-1"><a href="#Faqs" class="nav-link fw-bold p-1">FAQs</a></li>
+                        <li class="nav-item px-1"><a href="#Contact" class="nav-link fw-bold p-1">Contact Us</a></li>
+                        <li class="nav-item px-1"><a href="#Sign-in" class="nav-link fw-bold p-1" style="color: #f48529;">Sign in</a></li>
+                        <li class="nav-item px-1 search-bar"><a href="#Search" class="nav-link p-1"><i class="btn1 fa-solid fa-magnifying-glass"></i></a></li>
+                        <li class="nav-item px-1 sign-up"><a href="#Sign-up" class="btn1 nav-link fw-bold text-white">Sign Up<i class="fa-solid fa-right-long"></i></a></li>
+                    </ul>
+                </div>
+                </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="Slide">
+        <div class="row">
+            <div class="col">
+    <div id="CarouselSection" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img src="impact_of_digiskill.jpg" class="d-block w-100" alt="Image 1" height="450px">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="learn-earn.jpg" class="d-block w-100" alt="Image 2" height="450px">
+          </div>
+        </div>
+        <a href="#CarouselSection" class="carousel-control-prev" data-bs-slide="prev">
+          <span style="background-color: black; padding: 10px; border-radius: 50%;"><i class="fa-lg carousel-control-prev-icon"></i></span>
+          </a>
+          <a href="#CarouselSection" class="carousel-control-next" data-bs-slide="next">
+            <span style="background-color: black; padding: 10px; border-radius: 50%;"><i class="fa-lg carousel-control-next-icon"></i></span>
+            </a>
+      </div>
+    </div>
+    </div>
+</div>
+<div class="container-fluid" style="background-color: #f0f0f0; height: 110px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-2 project-stack fadeIn animation-duration: 1s; animation-delay: 1s;" style="position: relative;">
+                <img data-src="images/partners.png" alt="partners" loading="lazy" class="img-responsive partner-logo ls-is-cached lazyloaded" src="Project Stack holders.png" height="100px" width="80%" style="position: absolute; top: -10px;">
+            </div>
+            <div class="col-12 col-sm-4 moitt col-lg-3 col-md-4 animation-duration: 1s; animation-delay: 1s;">
+                <h3 class="m-0 fs-5 text-center">CONCIEVED BY</h3>
+                <a href="https://moitt.gov.pk/" target="_blank">
+                    <img class="img-responsive" src="moitt.png" height="80px" width="100%">
+                </a>
+
+            </div>
+            <div class="col-12 logos col-lg-2 col-sm-5 col-md-3 vu animation-duration: 1s; animation-delay: 1s;">
+                <h3 class="m-0 fs-5">EXECUTED BY</h3>
+                <a href="https://www.vu.edu.pk/" target="_blank">
+                    <img class="img-responsive justify-content-center" src="vu.png" height="70px" width="80%">
+                </a>
+
+            </div>
+            <div class="col-12 logos col-sm-2  col-lg-2 col-md-3 ignite animation-duration: 1s; animation-delay: 1s;">
+                <h3 class="m-0 fs-5">FUNDED BY</h3>
+                <a href="https://ignite.org.pk/" target="_blank">
+                    <img data-src="images/ignite.png" alt="Ignite" class="img-responsive" src="ignite.png" height="70px" width="100%">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container py-3" id="about_digiskills">
+    <div class="row">
+        <div class="col-md-6 pt-5">
+            <h1 class="" style="height: 10px;">About DigiSkills.pk</h1>
+            <div class="dubicate-bg-heading" style="height: 60px;">About DigiSkills.pk</div>
+            <p class="fs-5 fw-bold text-justify">DigiSkills.pk is the largest Training Program in Pakistan offering best <span style="color:#f48529;">Free Online Courses</span> in freelancing Skills with E-Certificates issued by VU and Ignite. Over <span style="color:#f48529;">4.0 Million + trainings</span> have been imparted <span style="color:#f48529;">since 2018</span> to generate skilled workforce in Future of Work and to strengthen digital economy of Pakistan.</p>
+            <p class="fs-5 fw-bold text-justify p-2">The <span style="color:#f48529;">Women Empowerment</span> is a key element of this program, as they benefit to learn and earn sitting in the comfort of their homes.</p>
+            <div class="col-md-6">
+                <a  class="btn1 text-white py-2 px-4 fw-bold fs-6" href="">View More <i class="fa fa-arrow-right"></i></a>
+        </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row mt-4" style="position: relative;">
+            <div class="col-sm-6 mb-4">
+                <a href=" " style="text-decoration: none; position: relative; top: 30px;">
+                <div class="card card-aboutdigiskill" style="height: 260px; background-color: #434443;">
+                    <img class="center py-3 mx-auto d-block" loading="lazy" style="width: 80px;" alt=" " src="whatdigiskills.png">
+                    <h3 class="pb-3 text-white text-center"><span style="color: #f48529;"><span class="">W</span>hat</span> is DigiSkills.pk?</h3>
+                </div></a>
+            </div>
+            <div class="col-sm-6" style="position: relative;">
+                <a href=" " style="text-decoration: none; position: relative;">
+                <div class="card card-aboutdigiskill" style="height: 260px; background-color: #434443;">
+                    <img class="center py-3 mx-auto d-block" loading="lazy" style="width: 80px;" alt=" " src="whydigiskills.png">
+                    <h3 class="pb-3 text-white text-center"><span style="color: #f48529;"><span class="">W</span>hy</span><br> is DigiSkills.pk?</h3>
+                </div></a>
+            </div>
+            <div class="col-sm-6 mb-2">
+                <a href=" " style="text-decoration: none; position: relative; top: 30px;">
+                <div class="card card-aboutdigiskill" style="height: 260px; background-color: #434443;">
+                    <img class="center py-3 mx-auto d-block" loading="lazy" style="width: 80px;" alt=" " src="whodigiskills.png">
+                    <h3 class="pb-3 px-3 text-white text-center"><span style="color: #f48529;"><span class="">W</span>ho</span><br> Shoud Join?</h3>
+                </div></a>
+            </div>
+            <div class="col-sm-6 mb-2" style="position: relative; position: relative;">
+                <a href=" " style="text-decoration: none;">
+                <div class="card card-aboutdigiskill" style="background-color: #f99312; height: 260px;">
+                    <img class="center py-3 mx-auto d-block" loading="lazy" style="width: 80px;" alt=" " src="join.png">
+                    <h3 class="pb-3 px-3 text-white text-center">Join Now</h3>
+                </div></a>
+            </div>
+                
+                </div>
+            </div>
+        </div>
+</div>
+<div class="container-fluid mt-4 bg-light">
+<div class="container py-3s" id="courses">
+        <div class="row">
+            <div class="dubicate-bg-heading" style="height: 40px; top: 5px;">Courses Offered</div>
+          <div class="col-md-12 d-flex justify-content-between">
+              <h1 style="font-size: 28px;" class="title">Courses Offered</h1>
+              <a  class="btn1 text-white py-2 px-4 fw-bold fs-6" href="">View All <i class="fa fa-arrow-right"></i></a>
+          </div>
+            </div>
+          <div class="row">
+              <div class="col-xl-3 col-lg-4 col-md-6 py-3">
+                <a class="card-anchor" style="text-decoration: none; color: black;" href="">
+                      <div class="card shadow card-position" style="height: 330px;">
+                        <div class="update-img">
+                          <img src="upd.png" alt="" width="100px" height="50px">
+                        </div>
+                          <div class="card-img" style="opacity: 0.6;">
+                              <img  src="Freelancing_Image.png" height="170px" width="100%"> 
+                          </div>
+                          <div class="card-body" style="border-bottom: 2px solid lightgray; min-height: 121px;">
+                            <h5 class="card-title fs-6">Freelancing</h5>
+                          </div>
+                            <footer class="justify-content-between px-2 py-1">
+                                <a style="text-decoration: none; color: #119300; font-weight: 700; font-size: 14px;" href="">View Details</a>
+                                <span class="float-end" style="color: gray;"><i class="fa fa-user"></i>&nbsp; 87,466</span>
+                            </footer>
+                  </div>
+                </a>
+                </div>
+                       <div class="col-xl-3 col-lg-4 col-md-6 py-3">
+                        <a class="card-anchor" style="text-decoration: none; color: black;" href="">
+                              <div class="card shadow card-position" style="height: 330px;">
+                                <div class="update-img">
+                                  <img src="upd.png" alt="" width="100px" height="50px">
+                                </div>
+                                  <div class="card-img" style="opacity: 0.6;">
+                                      <img  src="DigitalMarketing_Image.png" height="170px" width="100%"> 
+                                  </div>
+                                  <div class="card-body" style="border-bottom: 2px solid lightgray; min-height: 121px;">
+                                    <h5 class="card-title fs-6">Digital Marketing</h5>
+                                  </div>
+                                    <footer class="justify-content-between px-2 py-1">
+                                        <a style="text-decoration: none; color: #119300; font-weight: 700; font-size: 14px;" href="">View Details</a>
+                                        <span class="float-end" style="color: gray;"><i class="fa fa-user"></i>&nbsp; 87,466</span>
+                                    </footer>
+                          </div>
+                        </a>
+                        </div>
+                          <div class="col-xl-3 col-lg-4 col-md-6 py-3">
+                            <a class="card-anchor" style="text-decoration: none; color: black;" href="">
+                                  <div class="card shadow card-position" style="height: 330px;">
+                                    <div class="update-img">
+                                      <img src="upd.png" alt="" width="100px" height="50px">
+                                    </div>
+                                      <div class="card-img" style="opacity: 0.6;">
+                                          <img  src="GraphicDesign_Image.png" height="170px" width="100%"> 
+                                      </div>
+                                      <div class="card-body" style="border-bottom: 2px solid lightgray; min-height: 121px;">
+                                        <h5 class="card-title fs-6">Graphic Design</h5>
+                                      </div>
+                                        <footer class="justify-content-between px-2 py-1">
+                                            <a style="text-decoration: none; color: #119300; font-weight: 700; font-size: 14px;" href="">View Details</a>
+                                            <span class="float-end" style="color: gray;"><i class="fa fa-user"></i>&nbsp; 87,466</span>
+                                        </footer>
+                              </div></a>
+                            </div>
+                           <div class="col-xl-3 col-lg-4 col-md-6 py-3">
+                            <a class="card-anchor" style="text-decoration: none; color: black;" href="">
+                              <div class="card shadow card-position" style="height: 330px;">
+                                <div class="update-img">
+                                  <img src="new.png" alt="" width="100px" height="50px">
+                                </div>
+                                  <div class="card-img" style="opacity: 0.6;">
+                                      <img  src="VideoEditing_Image.png" height="170px" width="100%"> 
+                                  </div>
+                                  <div class="card-body" style="border-bottom: 2px solid lightgray; min-height: 121px;">
+                                    <h5 class="card-title fs-6">Video Editing, Animation and Vlogging </h5>
+                                  </div>
+                                    <footer class="justify-content-between px-2 py-1">
+                                        <a style="text-decoration: none; color: #119300; font-weight: 700; font-size: 14px;" href="">View Details</a>
+                                        <span class="float-end" style="color: gray;"><i class="fa fa-user"></i>&nbsp; 87,466</span>
+                                    </footer>
+                          </div>
+                            </a>
+                        </div>
+                           <div class="col-xl-3 col-lg-4 col-md-6 py-3">
+                            <a class="card-anchor" style="text-decoration: none; color: black;" href="">
+                        <div class="card shadow card-position" style="height: 330px;">
+                          <div class="update-img">
+                            <img src="upd.png" alt="" width="100px" height="50px">
+                          </div>
+                            <div class="card-img" style="opacity: 0.6;">
+                                <img  src="SEO_Image.png" height="170px" width="100%"> 
+                            </div>
+                            <div class="card-body" style="border-bottom: 2px solid lightgray; min-height: 121px;">
+                              <h5 class="card-title fs-6">SEO(Search Engine Optimization)</h5>
+                            </div>
+                              <footer class="justify-content-between px-2 py-1">
+                                  <a style="text-decoration: none; color: #119300; font-weight: 700; font-size: 14px;" href="">View Details</a>
+                                  <span class="float-end" style="color: gray;"><i class="fa fa-user"></i>&nbsp; 19,362</span>
+                              </footer>
+                    </div>
+                            </a>
+                  </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 py-3">
+                          <a class="card-anchor" style="text-decoration: none; color: black;" href="">
+                                <div class="card shadow card-position"  style="height: 330px;">
+                                  <div class="update-img">
+                                    <img src="upd.png" alt="" width="100px" height="50px">
+                                  </div>
+                                    <div class="card-img" style="opacity: 0.6;">
+                                        <img  src="Wordpress_Image.png" height="170px" width="100%"> 
+                                    </div>
+                                    <div class="card-body" style="border-bottom: 2px solid lightgray; min-height: 121px;">
+                                      <h5 class="card-title fs-6">WordPress</h5>
+                                    </div>
+                                      <footer class="justify-content-between px-2 py-1">
+                                          <a style="text-decoration: none; color: #119300; font-weight: 700; font-size: 14px;" href="">View Details</a>
+                                          <span class="float-end" style="color: gray;"><i class="fa fa-user"></i>&nbsp; 16,034</span>
+                                      </footer>
+                            </div>
+                            </a>
+                          </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 py-3">
+                              <a class="card-anchor" style="text-decoration: none; color: black;" href="">
+                                    <div class="card shadow card-position"  style="height: 330px;">
+                                      <div class="update-img">
+                                        <img src="new.png" alt="" width="100px" height="50px">
+                                      </div>
+                                        <div class="card-img" style="opacity: 0.6;">
+                                            <img  src="Communication_Image.png" height="170px" width="100%"> 
+                                        </div>
+                                        <div class="card-body" style="border-bottom: 2px solid lightgray; min-height: 121px;">
+                                          <h5 class="card-title fs-6">Communication and Soft Skills</h5>
+                                        </div>
+                                          <footer class="justify-content-between px-2 py-1">
+                                              <a style="text-decoration: none; color: #119300; font-weight: 700; font-size: 14px;" href="">View Details</a>
+                                              <span class="float-end" style="color: gray;"><i class="fa fa-user"></i>&nbsp; 16,034</span>
+                                          </footer>
+                                </div></a>
+                              </div>
+                              <div class="col-xl-3 col-lg-4 col-md-6 py-3">
+                                <a class="card-anchor" style="text-decoration: none; color: black;" href="">
+                                <div class="card shadow card-position" style="height: 330px;">
+                                  <div class="update-img">
+                                    <img src="upd.png" alt="" width="100px" height="50px">
+                                  </div>
+                                    <div class="card-img" style="opacity: 0.6;">
+                                        <img  src="ECommerce_Image.png" height="170px" width="100%"> 
+                                    </div>
+                                    <div class="card-body" style="border-bottom: 2px solid lightgray; min-height: 121px;">
+                                      <h5 class="card-title fs-6">E-Commerce Management</h5>
+                                    </div>
+                                      <footer class="justify-content-between px-2 py-1">
+                                          <a style="text-decoration: none; color: #119300; font-weight: 700; font-size: 14px;" href="">View Details</a>
+                                          <span class="float-end" style="color: gray;"><i class="fa fa-user"></i>&nbsp; 14,369</span>
+                                      </footer>
+                            </div></a>
+                          </div>
+                  <div class="col-xl-3 col-lg-4 col-md-6 py-3">
+                    <a class="card-anchor" style="text-decoration: none; color: black;" href="">
+                          <div class="card shadow card-position" style="height: 330px;">
+                            <div class="update-img">
+                              <img src="new.png" alt="" width="100px" height="50px">
+                            </div>
+                              <div class="card-img" style="opacity: 0.6;">
+                                  <img  src="DataAnalytics_Image.png" height="170px" width="100%"> 
+                              </div>
+                              <div class="card-body" style="border-bottom: 2px solid lightgray; min-height: 121px;">
+                                <h5 class="card-title fs-6" style="font-size:large;">Data Analytic and Business Intelligence</h5>
+                              </div>
+                                <footer class="justify-content-between px-2 py-1">
+                                    <a style="text-decoration: none; color: #119300; font-weight: 700; font-size: 14px;" href="">View Details</a>
+                                    <span class="float-end" style="color: gray;"><i class="fa fa-user"></i>&nbsp; 14,164</span>
+                                </footer>
+                      </div></a>
+                    </div>
+                          <div class="col-xl-3 col-lg-4 col-md-6 py-3">
+                            <a class="card-anchor" style="text-decoration: none; color: black;" href="">
+                                  <div class="card shadow card-position" style="height: 330px;">
+                                    <div class="update-img">
+                                      <img src="upd.png" alt="" width="100px" height="50px">
+                                    </div>
+                                      <div class="card-img" style="opacity: 0.6;">
+                                          <img  src="CreativeWriting_Image.png" height="170px" width="100%"> 
+                                      </div>
+                                      <div class="card-body" style="border-bottom: 2px solid lightgray; min-height: 121px;">
+                                        <h5 class="card-title fs-6">Creative Writing</h5>
+                                      </div>
+                                        <footer class="justify-content-between px-2 py-1">
+                                            <a style="text-decoration: none; color: #119300; font-weight: 700; font-size: 14px;" href="">View Details</a>
+                                            <span class="float-end" style="color: gray;"><i class="fa fa-user"></i>&nbsp; 11256</span>
+                                        </footer>
+                              </div></a>
+                            </div>
+                              <div class="col-xl-3 col-lg-4 col-md-6 py-3">
+                                <a class="card-anchor" style="text-decoration: none; color: black;" href="">
+                                      <div class="card shadow card-position" style="height: 330px;">
+                                        <div class="update-img">
+                                          <img src="new.png" alt="" width="100px" height="50px">
+                                        </div>
+                                          <div class="card-img" style="opacity: 0.6;">
+                                              <img  src="AffliateMarketing_Image.png" height="170px" width="100%"> 
+                                          </div>
+                                          <div class="card-body" style="border-bottom: 2px solid lightgray; min-height: 121px;">
+                                            <h5 class="card-title fs-6">Affliate Marketing</h5>
+                                          </div>
+                                            <footer class="justify-content-between px-2 py-1">
+                                                <a style="text-decoration: none; color: #119300; font-weight: 700; font-size: 14px;" href="">View Details</a>
+                                                <span class="float-end" style="color: gray;"><i class="fa fa-user"></i>&nbsp; 11,203</span>
+                                            </footer>
+                                  </div></a>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 py-3">
+                                  <a class="card-anchor" style="text-decoration: none; color: black;" href="">
+                                  <div class="card shadow card-position" style="height: 330px;">
+                                    <div class="update-img">
+                                      <img src="new.png" alt="" width="100px" height="50px">
+                                    </div>
+                                      <div class="card-img" style="opacity: 0.6;">
+                                          <img  src="VirtualAssisstant_Image.png" height="170px" width="100%"> 
+                                      </div>
+                                      <div class="card-body" style="border-bottom: 2px solid lightgray; min-height: 121px;">
+                                        <h5 class="card-title fs-6">Virtual Assistant</h5>
+                                      </div>
+                                        <footer class="justify-content-between px-2 py-1">
+                                            <a style="text-decoration: none; color: #119300; font-weight: 700; font-size: 14px;" href="">View Details</a>
+                                            <span class="float-end" style="color: gray;"><i class="fa fa-user"></i>&nbsp; 10,577</span>
+                                        </footer>
+                              </div></a>
+                            </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 py-3">
+                      <a class="card-anchor" style="text-decoration: none; color: black;" href="">
+                            <div class="card shadow card-position" style="height: 330px;">
+                              <div class="update-img">
+                                <img src="upd.png" alt="" width="100px" height="50px">
+                              </div>
+                                <div class="card-img" style="opacity: 0.6;">
+                                    <img  src="DigitalLiteracy_Image.png" height="170px" width="100%"> 
+                                </div>
+                                <div class="card-body" style="border-bottom: 2px solid lightgray; min-height: 121px;">
+                                  <h5 class="card-title fs-6">Digital Literacy</h5>
+                                </div>
+                                  <footer class="justify-content-between px-2 py-1">
+                                      <a style="text-decoration: none; color: #119300; font-weight: 700; font-size: 14px;" href="">View Details</a>
+                                      <span class="float-end" style="color: gray;"><i class="fa fa-user"></i>&nbsp; 6,925</span>
+                                  </footer>
+                        </div></a>
+                      </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 py-3">
+                              <a class="card-anchor" style="text-decoration: none; color: black;" href="">
+                                    <div class="card shadow card-position" style="height: 330px;">
+                                      <div class="update-img">
+                                        <img src="upd.png" alt="" width="100px" height="50px">
+                                      </div>
+                                        <div class="card-img" style="opacity: 0.6;">
+                                            <img  src="AutoCAD_Image.png" height="170px" width="100%"> 
+                                        </div>
+                                        <div class="card-body" style="border-bottom: 2px solid lightgray; min-height: 121px;">
+                                          <h5 class="card-title fs-6">AutoCAD</h5>
+                                        </div>
+                                          <footer class="justify-content-between px-2 py-1">
+                                              <a style="text-decoration: none; color: #119300; font-weight: 700; font-size: 14px;" href="">View Details</a>
+                                              <span class="float-end" style="color: gray;"><i class="fa fa-user"></i>&nbsp; 6,689</span>
+                                          </footer>
+                                </div></a>
+                              </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 py-3">
+                                  <a class="card-anchor" style="text-decoration: none; color: black;" href="">
+                                        <div class="card shadow card-position" style="height: 330px;">
+                                          <div class="update-img">
+                                            <img src="upd.png" alt="" width="100px" height="50px">
+                                          </div>
+                                            <div class="card-img" style="opacity: 0.6;">
+                                                <img  src="QuickBooks_Image.png" height="170px" width="100%"> 
+                                            </div>
+                                            <div class="card-body" style="border-bottom: 2px solid lightgray; min-height: 121px;">
+                                              <h5 class="card-title fs-6">QuickBooks</h5>
+                                            </div>
+                                              <footer class="justify-content-between px-2 py-1">
+                                                  <a style="text-decoration: none; color: #119300; font-weight: 700; font-size: 14px;" href="">View Details</a>
+                                                  <span class="float-end" style="color: gray;"><i class="fa fa-user"></i>&nbsp; 6078</span>
+                                              </footer>
+                                    </div></a>
+                                  </div>
+                                </div>
+</div>
+</div>
+<div class="container-fluid enrollment-section" id="enrollment-section">
+        <div class="container pb-4">
+        <div class="row">
+          <div class="col-4 py-3">
+                    <div class="card-enrollment">
+                          <img class="d-block mx-auto" src="signup.png" height="110px" width="110px"> 
+                          <h4 class="card-title fw-bold text-white text-center pt-5">Overall Sign-ups</h4>
+                          <h1 class="card-title mb-5 fw-bold text-white text-center">3,526,387</h1>
+                    </div>
+          </div>
+           <div class="col-4 py-3 d-flex justify-content-center">
+                    <div class="card-enrollment">
+                          <img class="d-block mx-auto"  src="enroll.png" height="110px" width="110px"> 
+                          <h4 class="card-title fw-bold text-white text-center pt-5 ">Overall Enrollments</h4>
+                          <h1 class="card-title mb-5 fw-bold text-white text-center">4,574,843</h1>
+                    </div>
+          </div>
+          <div class="col-4 py-3 d-flex justify-content-center">
+            <div class="card-enrollment">
+                  <img class="d-block mx-auto" src="enrollment.png" height="110px" width="110px"> 
+                  <h4 class="card-title fw-bold text-white text-center pt-5 ">DSTP2.0-Batch-08 Enrollments</h4>
+                  <h1 class="card-title mb-5 fw-bold text-white text-center">301,000</h1>
+            </div>
+           </div>
+       </div>
+       <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+          <a  class="btn2 py-2 px-3 fw-bold fs-6 cursor-pointer" href="">View More Insight <i class="fa fa-arrow-right"></i></a>
+    
+        </div>
+    
+       </div> 
+      </div>
+</div>
+
+<div class="container pt-2 pb-5" id="news_and_events">
+    <div class="dubicate-bg-heading" style="height: 40px; top: 5px;">News &amp; Events</div>
+            <div class="row mb-4">
+                <div class="col d-flex justify-content-between">
+                    <h2 style="font-size: 28px;" class="title">News &amp; Events</h2>
+                    <a  class="btn1 text-white py-2 px-3 fw-bold fs-6" href="">View All <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-lg-1 col-sm-2">
+                    <h1 class="fw-bold pt-5 text-center" style="color: #f99312;">03</h1>
+                    <h6 class="text-center">Jul, 2024</h6>  
+                </div>
+                <div class="col-lg-4 col-sm-4 img-news">
+                    <a href="">
+                        <div class="card card-img m-auto">
+                            <div class="image w-100" style="overflow: hidden;">
+                                <img class="img-fluid mx-auto my-auto d-block" src="New and Event Batch-08.PNG" alt="">
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <div class="col-lg-7 col-sm-6 newsAndevent">
+                        <a style="color: black; text-decoration: none;" href="" >
+                            <h4 class="text-truncate">Commencement of Batch-08 DigiSkills 2.0</h4>
+                        </a>
+                        <h6 style="color: #f99312;"><strong><i class="fa fa-calendar"></i> Jul 03, 2024 </strong></h6>
+                        <div class="new-paragraph">
+                            <p><span style="color:black"><span style="font-family:arial,sans-serif"><span style="font-size:14.0pt"><strong>Batch-08 will commence on July 10, 2024, Wednesday.</strong> We extend our best wishes in advance to the enrolled trainees... </span></span></span></p>
+                        </div>
+                        <a class="fw-bold" style="color:#f99312; text-decoration: none;" href=" ">Read More</a>
+                </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-lg-1 col-sm-2">
+                <h1 class="fw-bold pt-5" style="color: #f99312;">02</h1>
+                <h6 >Jul, 2024</h6>  
+            </div>
+            <div class="col-lg-4 col-sm-4 img-news">
+                <a href="">
+                    <div class="card card-img w-75 m-auto">
+                            <img class="mx-auto my-auto d-block" src="New and Event 300000 seat.PNG" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-7 col-sm-6 newsAndevent">
+                    <a style="color: black; text-decoration: none;" href="" >
+                        <h4 class="text-truncate">All 300, 000 Seats for Batch-08 of Digiskills 2.0 have been Filled.</h4>
+                    </a>
+                    <h6 style="color: #f99312;"><strong><i class="fa fa-calendar"></i> Jul 02, 2024 </strong></h6>
+                    <div class="new-paragraph">
+                        <p><span style="font-family:arial,sans-serif"><span style="font-size:14.0pt"><strong>Alhamdulillah! Enrollments for the Batch-08 have been completed.</strong> We had allocated 300, 000 seats altogather for this batch which have been filled within time...</span></span></p>
+                    </div>
+                    <a class="fw-bold" style="color:#f99312; text-decoration: none;" href=" ">Read More</a>
+            </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-lg-1 col-sm-2">
+            <h1 class="fw-bold pt-5" style="color: #f99312;">01</h1>
+            <h6 >Jul, 2024</h6>  
+        </div>
+        <div class="col-lg-4 col-sm-4 img-news">
+            <a href="">
+                <div class="card card-img w-75 m-auto">
+                        <img class="mx-auto my-auto d-block" src="New and Event 200000 seat.PNG" alt="">
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-7 col-sm-6 newsAndevent">
+                <a style="color: black; text-decoration: none;" href="" >
+                    <h4 class="text-truncate">FREE Enrollments for Batch-08 of DigiSkills 2.0 will End Soon.</h4>
+                </a>
+                <h6 style="color: #f99312;"><strong><i class="fa fa-calendar"></i> Jul 01, 2024 </strong></h6>
+                <div class="new-paragraph">
+                    <p><span style="font-family:arial,sans-serif"><span style="font-size:14.0pt">Less than 20,000 seats are available now so HURRY UP. Once the seats are filled, no extra seats will be available. </span></span></p>
+                </div>
+                <a class="fw-bold" style="color:#f99312; text-decoration: none;" href=" ">Read More</a>
+        </div>
+</div>
+<div class="row mb-4">
+    <div class="col-lg-1 col-sm-2">
+        <h1 class="fw-bold pt-5" style="color: #f99312;">24</h1>
+        <h6 >Jun, 2024</h6>  
+    </div>
+    <div class="col-lg-4 col-sm-4 img-news">
+        <a href="">
+            <div class="card card-img w-75 m-auto">
+                    <img class="mx-auto my-auto d-block" src="New and Event we are back.PNG" alt="">
+            </div>
+        </a>
+    </div>
+    <div class="col-lg-7 col-sm-6 newsAndevent">
+            <a style="color: black; text-decoration: none;" href="" >
+                <h4 class="text-truncate">We are Back from Eid Holidays. Please Resume Batch-07 activities.</h4>
+            </a>
+            <h6 style="color: #f99312;"><strong><i class="fa fa-calendar"></i> Jun 24, 2024 </strong></h6>
+            <div class="new-paragraph">
+                <p><span style="font-family:times new roman,serif"><span style="font-size:12.0pt">Welcome Back! DigiSkills Training Program has resumed its activities after the Eid break. We hope you enjoyed this break over the past week...</span></span></p>
+            </div>
+            <a class="fw-bold" style="color:#f99312; text-decoration: none;" href=" ">Read More</a>
+    </div>
+</div>
+<div class="row mb-4">
+    <div class="col-lg-1 col-sm-2">
+        <h1 class="fw-bold pt-5" style="color: #f99312;">14</h1>
+        <h6 >Jun, 2024</h6>  
+    </div>
+    <div class="col-lg-4 col-sm-4 img-news">
+        <a href="">
+            <div class="card card-img w-75 m-auto">
+                    <img class="mx-auto my-auto d-block" src="New and Event Eid.PNG" alt="">
+            </div>
+        </a>
+    </div>
+    <div class="col-lg-7 col-sm-6 newsAndevent">
+            <a style="color: black; text-decoration: none;" href="" >
+                <h4 class="text-truncate">Eid Al Adha Holidays BUT Batch-08 Enrollments are still OPEN</h4>
+            </a>
+            <h6 style="color: #f99312;"><strong><i class="fa fa-calendar"></i> Jun 14, 2024 </strong></h6>
+            <div class="new-paragraph">
+                <p><span style="color:black"><span style="font-family:arial,sans-serif"><span style="font-size:14.0pt">DigiSkills.pk will be closed from <strong>17th June 2024</strong> to <strong>23rd June 2024</strong> on account of the auspicious occasion of <strong>Eid al Adha</strong>. </span></span></span></p>
+            </div>
+            <a class="fw-bold" style="color:#f99312; text-decoration: none;" href=" ">Read More</a>
+    </div>
+</div>
+</div>
+<div class="container-fluid success_stories" id="success-stories">
+    <div class="container pt-2 pb-5" id="Slide">
+        <div class="dubicate-bg-heading" style="height: 40px; top: 5px; color: white;">Success Stories</div>
+      <div class="row">
+        <div class="col-md-12 d-flex justify-content-between">
+            <div class="text-left fs-1">
+                <h2 class="title text-white">Success Stories</h2>
+            </div>
+            <a  class="btn2 py-2 px-3 fw-bold fs-6" href="">View All <i class="fa fa-arrow-right"></i></a>
+        </div>
+        <div class="col-md-12">
+          <p class="top-earners fs-5 fw-bold" style="color:#f99312;"><i class="fa-regular fa-money-bill-1"></i> Top Ten Earners</p>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5 success-stories_images">
+        <img src="success-stories image1.png" alt="" class="rounded-circle image-1" height="50px" width="50px">
+        <img src="success-stories image2.png" alt="" class="rounded-circle image-2" height="50px" width="50px">
+        <img src="success-stories image3.png" alt="" class="rounded-circle image-3" height="50px" width="50px">
+        <img src="success-stories image4.png" alt="" class="rounded-circle image-4" height="50px" width="50px">
+        <img src="success-stories image5.png" alt="" class="rounded-circle image-5" height="50px" width="50px">
+        <img src="success-stories image6.png" alt="" class="rounded-circle image-6" height="50px" width="50px">
+        <img src="success-stories image7.png" alt="" class="rounded-circle image-7" height="50px" width="50px">
+        <img src="success-stories image8.png" alt="" class="rounded-circle image-8" height="50px" width="50px">
+        <img src="success-stories image9.png" alt="" class="rounded-circle image-9" height="50px" width="50px">
+        <img src="success-stories image10.png" alt="" class="rounded-circle image-10" height="50px" width="50px">
+      </div>
+          <div class="col-md-7 success-stories-right-carausel">
+              <div id="CarouselSection" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner carousel-fade">                                  
+          <div class="carousel-item  active" data-bs-interval="3000">
+              <div class="row">
+                  <div class="col-md-3 d-flex align-items-center">
+                      <img src="success-stories image1.png" alt="Muhammad Talha Javed" class="img-fluid lazyload rounded-circle mx-auto" loading="lazy" height="100" width="100">
+                  </div>
+                  <div class="col-lg-8">
+                      <div class="fr-client-about-details">
+                          <h2 class="text-white fs-1 fw-bold">#1</h2>
+                          <h3 class="pulse animated" style="text-transform: capitalize; color: #f99312;">Muhammad Talha Javed</h3>
+                          <h4 class="text-white" style="text-transform: capitalize;"><i class="fa-solid fa-location-dot"></i> Sargodha</h4>
+                          <div class="l-earned fw-bold fs-5" style="color: #f99312;">Earned  US$<span>467,200 </span></div>
+                          <h5 class="text-white">Fiverr's Rating:
+                              <span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger"></span>
+                          </h5>
+                          <div class="success-paragraphs fadeInUp animated">
+                          <p class="text-white description-text">I am a Batch 06 student of DigiSkills, and I have started my freelance career through Fiverr, where I am now proud to be a Level 2 seller. Additionally, I founded an SEO agency based in Kotmomin, Sargodha, and operating across the USA. We're growing daily, thanks to the solid foundation set by DigiSkills. Thank you for offering such an amazing platform that has significantly contributed to my success.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+              <div class="row">
+                  <div class="col-md-3 d-flex align-items-center">
+                      <img src="success-stories image2.png" alt="Muhammad Rizwan" class="img-fluid lazyload rounded-circle mx-auto" loading="lazy" height="100" width="100">
+                  </div>
+                  <div class="col-lg-8">
+                      <div class="fr-client-about-details">
+                          <h2 class="text-white fs-1 fw-bold">#2</h2>
+                          <h3 class="pulse animated" style="text-transform: capitalize; color: #f99312;">Muhammad Rizwan</h3>
+                          <h4 class="text-white" style="text-transform: capitalize;"><i class="fa-solid fa-location-dot"></i> Kasur</h4>
+                          <div class="l-earned fw-bold fs-5" style="color: #f99312;">Earned  US$<span>378,104 </span></div>
+                          <h5 class="text-white">Fiverr's Rating:
+                              <span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger"></span>
+                          </h5>
+                          <div class="success-paragraphs fadeInUp animated">
+                          <p class="text-white description-text">I have learned a lot from DigiSkills and now I am Pro verified on Fiverr, Having an Agency account on Fiverr and Top-Rated on Upwork. I am also running a software house in Lahore. My goal is to create more earning and freelance opportunities for youth. I have recommended DigiSkills to a lot of people so that they can learn digital skills from the best courses and that too free of cost. Thank you!</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+              <div class="row">
+                  <div class="col-md-3 d-flex align-items-center">
+                      <img src="success-stories image3.png" alt="Syed Muhammad Bilal" class="img-fluid lazyload rounded-circle mx-auto" loading="lazy" height="100" width="100">
+                  </div>
+                  <div class="col-lg-8">
+                      <div class="fr-client-about-details">
+                          <h2 class="text-white fs-1 fw-bold">#3</h2>
+                          <h3 class="pulse animated" style="text-transform: capitalize; color: #f99312;">Syed Muhammad Bilal</h3>
+                          <h4 class="text-white" style="text-transform: capitalize;"><i class="fa-solid fa-location-dot"></i> Karachi</h4>
+                          <div class="l-earned fw-bold fs-5" style="color: #f99312;">Earned  US$<span>361,160 </span></div>
+                          <h5 class="text-white">Fiverr's Rating:
+                              <span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger"></span>
+                          </h5>
+                          <div class="success-paragraphs fadeInUp animated">
+                          <p class="text-white description-text">Enrolling in DigiSkills.pk's Freelancing course was a game-changer for me. With expert guidance, I honed my skills and dove into the world of freelancing. Armed with digital marketing strategies, I built a strong online presence, attracting clients worldwide. Through effective communication and time management, I delivered exceptional results, earning a reputation as a reliable freelancer. Today, I'm living my dream, thanks to DigiSkills.pk, where my career thrives with endless possibilities.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+              <div class="row">
+                  <div class="col-md-3 d-flex align-items-center">
+                      <img src="success-stories image4.png" alt="Faisal Masroor" class="img-fluid lazyload rounded-circle mx-auto" loading="lazy" height="100" width="100">
+                  </div>
+                  <div class="col-lg-8">
+                      <div class="fr-client-about-details">
+                          <h2 class="text-white fs-1 fw-bold">#4</h2>
+                          <h3 class="pulse animated" style="text-transform: capitalize; color: #f99312;">Faisal Masroor</h3>
+                          <h4 class="text-white" style="text-transform: capitalize;"><i class="fa-solid fa-location-dot"></i> Mirpur Khas</h4>
+                          <div class="l-earned fw-bold fs-5" style="color: #f99312;">Earned  US$<span>300,024 </span></div>
+                          <h5 class="text-white">Fiverr's Rating:
+                              <span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger"></span>
+                          </h5>
+                          <div class="success-paragraphs fadeInUp animated">
+                          <p class="text-white description-text">After completion of Freelancing and Creative Writing Courses from DigiSkills, I embarked on my career as a freelancer, initially on Fiverr&nbsp;and subsequently transitioned to other Platforms such as Upwork, PPH, Freelancer&nbsp;and Guru. My core competencies include research, writing, and drafting.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+              <div class="row">
+                  <div class="col-md-3 d-flex align-items-center">
+                      <img src="success-stories image5.png" alt="Falah Ahmad" class="img-fluid lazyload rounded-circle mx-auto" loading="lazy" height="100" width="100">
+                  </div>
+                  <div class="col-lg-8">
+                      <div class="fr-client-about-details">
+                          <h2 class="text-white fs-1 fw-bold">#5</h2>
+                          <h3 class="pulse animated" style="text-transform: capitalize; color: #f99312;">Falah Ahmad</h3>
+                          <h4 class="text-white" style="text-transform: capitalize;"><i class="fa-solid fa-location-dot"></i> Lahore</h4>
+                          <div class="l-earned fw-bold fs-5" style="color: #f99312;">Earned  US$<span>300,000 </span></div>
+                          <h5 class="text-white">Fiverr's Rating:
+                              <span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger"></span>
+                          </h5>
+                          <div class="success-paragraphs fadeInUp animated">
+                          <p class="text-white description-text">Started my journey from Batch-05 of DigiSkills (2020) and Alhamdulillah earned over $300,000 in the last 3&nbsp;years. I am also a Pro Verified and Top Rated Seller on Fiverr. I would like to especially thank DigiSkills for showing us the way and also Sir Hisham for the guidance.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+              <div class="row">
+                  <div class="col-md-3 d-flex align-items-center">
+                      <img src="success-stories image6.png" alt="Waseem Akram" class="img-fluid lazyload rounded-circle mx-auto" loading="lazy" height="100" width="100">
+                  </div>
+                  <div class="col-lg-8">
+                      <div class="fr-client-about-details">
+                          <h2 class="text-white fs-1 fw-bold">#6</h2>
+                          <h3 class="pulse animated" style="text-transform: capitalize; color: #f99312;">Waseem Akram</h3>
+                          <h4 class="text-white" style="text-transform: capitalize;"><i class="fa-solid fa-location-dot"></i> Shangla</h4>
+                          <div class="l-earned fw-bold fs-5" style="color: #f99312;">Earned  US$<span>240,512 </span></div>
+                          <h5 class="text-white">Fiverr's Rating:
+                              <span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger"></span>
+                          </h5>
+                          <div class="success-paragraphs fadeInUp animated">
+                          <p class="text-white description-text">In 2018, I embarked on my freelancing journey, but the lack of relevant knowledge appeared as a significant obstacle. However, Digiskills eliminated that barrier and paved a professional path for me. Today, I proudly stand as the founder of two thriving companies.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+              <div class="row">
+                  <div class="col-md-3 d-flex align-items-center">
+                      <img src="success-stories image7.png" alt="Muhammad Ali Hussain Shahid" class="img-fluid lazyload rounded-circle mx-auto" loading="lazy" height="100" width="100">
+                  </div>
+                  <div class="col-lg-8">
+                      <div class="fr-client-about-details">
+                          <h2 class="text-white fs-1 fw-bold">#7</h2>
+                          <h3 class="pulse animated" style="text-transform: capitalize; color: #f99312;">Muhammad Ali Hussain Shahid</h3>
+                          <h4 class="text-white" style="text-transform: capitalize;"><i class="fa-solid fa-location-dot"></i> Karor</h4>
+                          <div class="l-earned fw-bold fs-5" style="color: #f99312;">Earned  US$<span>189,278 </span></div>
+                          <h5 class="text-white">Fiverr's Rating:
+                              <span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger"></span>
+                          </h5>
+                          <div class="success-paragraphs fadeInUp animated">
+                          <p class="text-white description-text">I provide Web Development, E-Commerce, Dropshipping, ad networks, and other services directly to my clients through my website. I also give free classes to interested people in my area to empower my society. Specialist in dropshipping model and covering eCommerce marketplaces of USA and Europe. I am grateful to DigiSkills and its team.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+              <div class="row">
+                  <div class="col-md-3 d-flex align-items-center">
+                      <img src="success-stories image8.png" alt="Usman Qureshi" class="img-fluid lazyload rounded-circle mx-auto" loading="lazy" height="100" width="100">
+                  </div>
+                  <div class="col-lg-8">
+                      <div class="fr-client-about-details">
+                          <h2 class="text-white fs-1 fw-bold">#8</h2>
+                          <h3 class="pulse animated" style="text-transform: capitalize; color: #f99312;">Usman Qureshi</h3>
+                          <h4 class="text-white" style="text-transform: capitalize;"><i class="fa-solid fa-location-dot"></i> Jalalpur Pirwala</h4>
+                          <div class="l-earned fw-bold fs-5" style="color: #f99312;">Earned  US$<span>160,517 </span></div>
+                          <h5 class="text-white">Fiverr's Rating:
+                              <span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger"></span>
+                          </h5>
+                          <div class="success-paragraphs fadeInUp animated">
+                          <p class="text-white description-text">I joined DigiSkills from its first Batch. I started working on freelance marketplace in November 2019 and now I am earning a handsome amount of money. This&nbsp;only happened&nbsp;because of Sir Hisham Sarwar and the great team of DigiSkills.pk.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+              <div class="row">
+                  <div class="col-md-3 d-flex align-items-center">
+                      <img src="success-stories image9.png" alt="Hameedullah Khan" class="img-fluid lazyload rounded-circle mx-auto" loading="lazy" height="100" width="100">
+                  </div>
+                  <div class="col-lg-8">
+                      <div class="fr-client-about-details">
+                          <h2 class="text-white fs-1 fw-bold">#9</h2>
+                          <h3 class="pulse animated" style="text-transform: capitalize; color: #f99312;">Hameedullah Khan</h3>
+                          <h4 class="text-white" style="text-transform: capitalize;"><i class="fa-solid fa-location-dot"></i> Swat</h4>
+                          <div class="l-earned fw-bold fs-5" style="color: #f99312;">Earned  US$<span>157,842 </span></div>
+                          <h5 class="text-white">Fiverr's Rating:
+                              <span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger"></span>
+                          </h5>
+                          <div class="success-paragraphs fadeInUp animated">
+                          <p class="text-white description-text">I had been learning Web Development when I was in school, but I didn't know where and how to utilize those skills. Finally, DigiSkills.pk came as a great opportunity, and by learning Freelancing from Sir Hisham Sarwar, I finally got my right direction. I could now utilize and earn from the skills, I had learned so far. My journey started at that point, and I have been achieving new milestones and advancing in my career since then. Thank you, Sir Hisham Sarwar and DigiSkills.pk.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+              <div class="row">
+                  <div class="col-md-3 d-flex align-items-center">
+                      <img src="success-stories image8.png" alt="MUHAMMAD ZAKRIAn" class="img-fluid lazyload rounded-circle mx-auto" loading="lazy" height="100" width="100">
+                  </div>
+                  <div class="col-lg-8">
+                      <div class="fr-client-about-details">
+                          <h2 class="text-white fs-1 fw-bold">#10</h2>
+                          <h3 class="pulse animated" style="text-transform: capitalize; color: #f99312;">MUHAMMAD ZAKRIA</h3>
+                          <h4 class="text-white" style="text-transform: capitalize;"><i class="fa-solid fa-location-dot"></i> Shahkot</h4>
+                          <div class="l-earned fw-bold fs-5" style="color: #f99312;">Earned  US$<span>154,665 </span></div>
+                          <h5 class="text-white">Fiverr's Rating:
+                              <span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger me-1"></span><span class="fa-solid fa-star checked text-danger"></span>
+                          </h5>
+                          <div class="success-paragraphs fadeInUp animated">
+                          <p class="text-white description-text">Till now, I have complete over 1000 projects and completed top-rated requirements on Fiverr, and Alhamdulillah now, I am also running a software house. With my earnings, I have bought a car and a house. I thank Allah and after that the team of Digiskills who made all this possible for me.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      
+  </div>
+  <div id="CarouselSection" class="carousel slide pt-5" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button style="width: 30px; height: 3px; margin-right: 3px;" type="button" data-bs-target="#CarouselSection" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
+        </button>
+        <button style="width: 30px; height: 3px; margin-right: 3px;" type="button" data-bs-target="#CarouselSection" data-bs-slide-to="1" aria-label="Slide 2">
+        </button>
+        <button style="width: 30px; height: 3px; margin-right: 3px;" type="button" data-bs-target="#CarouselSection" data-bs-slide-to="2" aria-label="Slide 3">
+        </button>
+        <button style="width: 30px; height: 3px; margin-right: 3px;" type="button" data-bs-target="#CarouselSection" data-bs-slide-to="3" aria-label="Slide 4">
+        </button>
+        <button style="width: 30px; height: 3px; margin-right: 3px;" type="button" data-bs-target="#CarouselSection" data-bs-slide-to="4" aria-label="Slide 5">
+        </button>
+        <button style="width: 30px; height: 3px; margin-right: 3px;" type="button" data-bs-target="#CarouselSection" data-bs-slide-to="5" aria-label="Slide 6">
+        </button>
+        <button style="width: 30px; height: 3px; margin-right: 3px;" type="button" data-bs-target="#CarouselSection" data-bs-slide-to="6" aria-label="Slide 7">
+        </button>
+        <button style="width: 30px; height: 3px; margin-right: 3px;" type="button" data-bs-target="#CarouselSection" data-bs-slide-to="7" aria-label="Slide 8">
+        </button>
+        <button style="width: 30px; height: 3px; margin-right: 3px;" type="button" data-bs-target="#CarouselSection" data-bs-slide-to="8" aria-label="Slide 9">
+        </button>
+        <button style="width: 30px; height: 3px; margin-right: 3px;" type="button" data-bs-target="#CarouselSection" data-bs-slide-to="9" aria-label="Slide 10">
+        </button>
+    </div>
+    </div>
+  </div>
+  
+  </div>
+  </div>
+      </div>
+  </div>
+  <div class="container-fluid section-freelancing-skills py-5  text-center">
+    <h2 class="text-white fs-1 pt-5 pb-3" style="visibility: visible; animation-duration: 0.8s;-webkit-animation-delay: 0.7s; animation-delay: 0.7s;">Be Your Own Boss By Learning Freelancing Skills</h2>
+    <div style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.7s;">
+        <div class="pb-5">
+            <a  class="btn2 py-2 px-4 fw-bold fs-4" href="">Join Now for Free <i class="fa fa-arrow-right"></i></a>
+        </div>
+    </div>
+</div>
+<div class="container pt-2">
+    <div class="dubicate-bg-heading" style="height: 40px; top: 5px; color: black;">Mobile App</div>
+    <div class="row">
+            <div class="fs-1">
+                <h1 class="title">Mobile App</h1>
+            </div>
+           </div>
+        </div>
+            <div class="container-fluid Mobile_apps">
+                    <div class="container pt-2 pb-5">
+                        <div class="row">
+                                <div class="col-lg-4 mobile-app fadeInLeft animated animated" id="mobile-img" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s;">
+                                    <img src="mobile_app.png" alt="mobile app" class="img-responsive">
+                                </div>
+                                <div class="col-md-8 text-center mt-auto pb-5 mobile-description fadeInRight animated animated animated" style="visibility: visible; animation-duration: 1s; animation-delay: 0.4s;">
+                                    <p>
+                                        Never miss a lecture or run over a deadline of your Quiz or Hands on Exercise.<br>
+                                        Download and Install the DigiSkills.pk App to give it a Try!
+                                    </p>
+                                    <div class="app-icons">
+                                        <a href="https://play.google.com/store/apps/details?id=pk.digiskills.lms" target="_blank">
+                                            <img src="android.png" class="lazyload" alt="android"></a>
+                                        <a href="https://apps.apple.com/app/digiskills-lms/id6447939148" target="_blank">
+                                            <img src="app_store.png" class="lazyload" alt="App Store"></a>
+                                        <a href="https://appgallery.huawei.com/#/app/C103005149" target="_blank">
+                                            <img src="huwawi.png" class="lazyload" alt="huwaie"></a>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+<footer class="bg-dark py-3" id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 footer-logo">
+                    <a href=" ">
+                        <img src="digiSkillLogo.png" alt="" height="60px" width="250px"></a>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-links footer-menu">
+                    <h4 style="color:#f99312;">Useful Links</h4>
+                    <div class="d-flex">
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i><a style="text-decoration: none; color: white;" href="">Courses</a></li>
+                        <li><i class="bx bx-chevron-right"></i><a style="text-decoration: none; color: white;" href="">Success Stories</a></li>
+                        <li><i class="bx bx-chevron-right"></i><a style="text-decoration: none; color: white;" href="">Blog</a></li>
+                        <li><i class="bx bx-chevron-right"></i><a style="text-decoration: none; color: white;" href="">Story of the Month</a></li>
+                        <li><i class="bx bx-chevron-right"></i><a style="text-decoration: none; color: white;" href="">Contact Us</a></li>
+                    </ul>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i><a style="text-decoration: none; color: white;" href="">News &amp; Events</a></li>
+                        <li><i class="bx bx-chevron-right"></i><a style="text-decoration: none; color: white;" href="">FAQs</a></li>
+                        <li><i class="bx bx-chevron-right"></i><a style="text-decoration: none; color: white;" href="">How It Works</a></li>
+                        <li><i class="bx bx-chevron-right"></i><a style="text-decoration: none; color: white;" href="">Reflections</a></li>
+                        <li><i class="bx bx-chevron-right"></i><a style="text-decoration: none; color: white;" href="">Sitemap</a></li>
+                    </ul>
+                </div>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4 style="color:#f99312;">Contact DigiSkills</h4>
+                    <ul>
+                        <li><span class="tg-contactinfoicon text-white">Phone:</span><span class="text-white">&nbsp; <i class="fa fa-phone"></i>&nbsp;&nbsp;0304-111-1570</span></li>
+                        <li><span class="tg-contactinfoicon text-white">Email:</span><span> &nbsp;&nbsp; <i class="fa fa-envelope-o"></i>&nbsp;&nbsp;<span><a href="mailto:info@digiskills.pk" style="text-decoration: none; color:#f99312;">info@digiskills.pk</a></span> </span></li>
+                    </ul>
+                </div>
+                <div class="social-links footer-links col-lg-3 col-md-6">
+                    <h4 style="color:#f99312;">Follow Us</h4>
+                    <a href="https://www.facebook.com/digiskillspakistan" target="_blank" class="facebook"><i class="fa-brands fa-facebook-f text-white" style="background-color: rgb(54, 54, 182); padding: 10px; border-radius: 50%;"></i></a>
+                    <a href="https://www.linkedin.com/company/digiskillspakistan" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin-in text-white" style="background-color: rgb(91, 91, 238); padding: 10px; border-radius: 50%;"></i></a>
+                    <a href="https://www.youtube.com/c/DigiSkillsPakistan" target="_blank" class="youtube"><i class="fa-brands fa-youtube text-white" style="background-color: rgb(230, 88, 88); padding: 10px; border-radius: 50%;"></i></a>
+                    <a href="https://www.instagram.com/digiskillspakistan/" target="_blank" class="instagram"><i class="fa-brands fa-instagram text-white" style="background-color: rgb(226, 82, 171); padding: 10px; border-radius: 50%;"></i></a>
+                    <a href="https://twitter.com/digiskillspak" target="_blank" class="twitter"><i class="fa-brands fa-twitter text-white" style="background-color: rgb(138, 138, 233); padding: 10px; border-radius: 50%;"></i></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 copyright">
+                <hr style="color: #d9d9d9;">
+                <p class="color:#d9d9d9; text-white text-center">Copyright © 2018<a href="" style="text-decoration: none; color: #f99312;"> DigiSkills.pk</a>. All Rights Reserved. </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <div class="container-fluid">
+        <div class="nav sidebar">
+            <ul class="drawer-menu">
+                <li class="nav-item">
+                    <a href=" "><i class="fa-solid fa-phone"></i></a>
+                    <ul>
+                        <li><a href=" "><span>0304-111-1570</span></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href=" " target=""><i class="fa-regular fa-envelope"></i></a>
+                    <ul>
+                        <li><a href=" " target=""><span>info@digiskills.pk</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href=""><i class="fa-solid fa-question"></i></a>
+                    <ul>
+                        <li class="nav-item"><a href=""><span>Have any Question?</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
